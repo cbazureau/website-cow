@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta content="#000000" name="theme-color" />
+    <cow-manifest-favicon
+      src="../img/original-favicon.png"
+    ></cow-manifest-favicon>
+    <title>Create one-page website</title>
+    <meta name="description" content="Create one-page website" />
+    <meta name="author" content="PUT-YOUR-NAME-HERE" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="Header">
+      <div class="Header__titleZone">
+        <h1>C&eacute;dric Bazureau</h1>
+        <h2>Building things for the web with love and passion since 2002</h2>
+      </div>
+      <div class="Header__imgZone">
+        <cow-image
+            src="../img/identite.jpg"
+            alt="It's me !"
+            className="Header__idPicture"
+          ></cow-image>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#how-to-start">Current postion</a></li>
+        <li><a href="#optimized">What do you mean by "optimized" ?</a></li>
+        <li><a href="#documentation">Documentation</a></li>
+      </ul>
+    </nav>
+    
+    <footer>
+      <p>Credits</p>
+      <p>
+        This website is build with <a href="https://github.com/cbazureau/create-one-page-website">create-one-page-website</a> a small framework for optimized one-page website created by myself
+      </p>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+    <cow-serviceworker></cow-serviceworker>
+  </body>
+</html>

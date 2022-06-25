@@ -1,0 +1,15 @@
+{
+  "name": "website-cow",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cow-scripts": "0.2.2"
+  },
+  "scripts": {
+    "start": "cow-scripts start",
+    "build": "cow-scripts build",
+    "test": "cow-scripts test",
+    "eject": "cow-scripts eject"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
