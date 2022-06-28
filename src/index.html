@@ -53,58 +53,85 @@
         and, last but not least, to raise 2 kids !
       </p>
     </div>
-    <div class="Expert__features">
+    <cow-visible className="Expert__features">
       <div class="Expert__caroussel">
         <div class="ExpertBlock"><span class="ExpertBlock__icon">
           <cow-inline-svg src="../img/about-device.svg" className="ExpertBlock__svg"></cow-inline-svg>
         </span>
           <h3 class="ExpertBlock__title">Multi-device Web Development</h3>
-          <p class="ExpertBlock__desc">Aguerri au développement d'applications web complexes React, NodeJs, HTML5/JS/CSS
-            (mais également Angular, PHP) multi-navigateurs et multi-devices en Responsive ou Adaptive Design dans des
-            contextes multi-langues.</p>
+          <p class="ExpertBlock__desc">
+            Experienced in the development of complex web applications React, NodeJs, HTML5/JS/CSS
+              (but also Angular, PHP) multi-browser and multi-device in Responsive in
+                        multilingual contexts.</p>
+            <ul class="ExpertBlock__technos">
+              <li><span>ReactJs</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>NodeJs</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>HTML5/VanillaJS/CSS</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>Angular/VueJs/Svelte</span><span class="ExpertBlock__Stars" style="--rating: 3;" ></span></li>
+              <li><span>PHP</span><span class="ExpertBlock__Stars" style="--rating: 3;" ></span></li>
+            </ul>
         </div>
         <div class="ExpertBlock"><span class="ExpertBlock__icon">
           <cow-inline-svg src="../img/about-lead.svg" className="ExpertBlock__svg"></cow-inline-svg>
         </span>
           <h3 class="ExpertBlock__title">Lead et Expertise Technique</h3>
-          <p class="ExpertBlock__desc">Expert référent et reconnu dans mes différentes expériences, je m'efforce de
-            transmettre, de conseiller et de mettre en pratique. J'effectue également de la veille technologique afin de
-            rester à la page.</p>
+          <p class="ExpertBlock__desc">Referent expert and recognized in my various experiences, I strive to transmit, advise and put into practice. I also carry out technology watch in order to stay up to date.</p>
+            <ul class="ExpertBlock__technos">
+              <li><span>Teaching</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>Sharing/Contributing</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>Change Management</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>Software architect</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>POC</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+            </ul>
         </div>
         <div class="ExpertBlock"><span class="ExpertBlock__icon">
           <cow-inline-svg src="../img/about-server.svg" className="ExpertBlock__svg"></cow-inline-svg>
         </span>
           <h3 class="ExpertBlock__title">Compétences Serveur/Cloud</h3>
-          <p class="ExpertBlock__desc">Hébergement AWS ou GCP via images docker ou non. Forte expertise sur les différents
-            niveaux d'une stack (NGINX, NodeJs, static, CDN) sur les services AWS (ECS, EC2, Cloudfront, S3, lambda, ...)
-            et sur les solutions de CI (Gitlab-CI, Jenkins)</p>
+          <p class="ExpertBlock__desc">AWS or GCP hosting via docker images or not. Strong Web expertise (Web Server, CDN, ...) on AWS services (ECS, EC2, Cloudfront, S3, lambda, ...) and on CI solutions (Gitlab-CI, Jenkins )</p>
+            <ul class="ExpertBlock__technos">
+              <li><span>HTTP principles</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>NGINX/Apache</span><span class="ExpertBlock__Stars" style="--rating: 5;" ></span></li>
+              <li><span>Docker</span><span class="ExpertBlock__Stars" style="--rating: 4.5;" ></span></li>
+              <li><span>Gitlab-CI/Jenkins/Actions</span><span class="ExpertBlock__Stars" style="--rating: 4.5;" ></span></li>
+              <li><span>AWS/GCP</span><span class="ExpertBlock__Stars" style="--rating: 4;" ></span></li>
+            </ul>
         </div>
       </div>
+    </cow-visible>
+  </section>
+  <cow-visible className="Experience Experience_groupRenault" tag="section">
+    <cow-inline-svg src="../img/renault.svg" className="Renault__logo"></cow-inline-svg>
+    <div class="Experience__intro">
+      <h1>Renault Group (Mai 2017 - Now)</h1>
+      <p>Senior Lead Developper of 6 teams (26 devs) that managed more than 150 websites of Renault Group (Renault, Dacia,
+        Alpine, Mobilize) spread over more than 30 countries. The technical stack below delivered a <a href="https://web.dev/renault" rel="noopener noreferrer" target="_blank">best in class experience</a></p>
+      <ul>
+        <li>Nginx (Web server)</li>
+        <li>ReactJs (CSR + SSR)<ul>
+            <li><strong>Server Side Rendering (SSR)</strong> for better SEO</li>
+            <li><strong>Responsive</strong> websites and Jpg/Webp pictures</li>
+            <li>IntersectionObserver <strong>Lazyloading</strong> for pictures and videos</li>
+            <li>JS and CSS <strong>Component-Based Chunking</strong></li>
+            <li><strong>React 18</strong>, Redux, Webpack, Babel, ...</li>
+            <li>Jest, Enzyme, ...</li>
+            <li>Eslint (Airbnb + custom rules), Stylelint (Airbnb + custom rules)</li>
+            <li>Flow, Prettier, ...</li>
+          </ul>
+        </li>
+        <li>Nodejs (Back for front)</li>
+        <li>Adobe Experience Manager (used as an headless JSON CMS)</li>
+        <li><strong>Gitlab, Gitlab-Ci</strong>, Build and run <strong>Docker</strong> image</li>
+        <li>Hosting <strong>AWS</strong> : Cloudfront, Docker/ECS, Lambda</li>
+        <li>Monitoring : Google Lighthouse, Broken Links detection, Grafana, Kibana, ...</li>
+      </ul>
     </div>
-  </section>
-  <section class="Experience Experience_groupRenault">
-    <p>https://web.dev/renault</p>
-    <p>Senior Lead Developper of 6 teams (26 devs) that managed more than 150 websites of Renault Group (Renault, Dacia,
-      Alpine, Mobilize) spread over more than 30 countries.</p>
-    <ul>
-      <li>Front using ReactJs<ul>
-          <li><strong>Server Side Rendering (SSR)</strong> with Server Push</li>
-          <li><strong>Responsive</strong> websites and Jpg/Webp pictures</li>
-          <li>IntersectionObserver <strong>Lazyloading</strong> for pictures and videos</li>
-          <li>JS and CSS <strong>Component-Based Chunking</strong></li>
-          <li>Wysiwyg CMS with a JSON API provided by <strong>Adobe Experience Manager (AEM)</strong></li>
-          <li><strong>React 18</strong>, Redux, Webpack, Babel, ...</li>
-          <li>Jest, Enzyme, ...</li>
-          <li>Eslint, Stylelint, Flow, Prettier...</li>
-        </ul>
-      </li>
-      <li>Back for front using Nodejs<ul>
-          <li><strong>Gitlab, Gitlab-Ci</strong>, Build and run <strong>Docker</strong> image</li>
-          <li>Nginx, AEM (as an headless CMS)</li>
-          <li>Hosting <strong>AWS</strong> : Cloudfront, Docker/ECS, Lambda</li>
-          <li>Monitoring : Google Lighthouse, Broken Links detection, Grafana, Kibana, Datadog</li>
-        </ul>
-  </section>
+    <div class="Experience__screenshots">
+      <cow-image src="../img/renault1.jpg" alt="Renault Screenshot 1" className="Experience__screenshot is-mobile"></cow-image>
+      <cow-image src="../img/renault5.jpg" alt="Renault Screenshot 5" className="Experience__screenshot is-mobile"></cow-image>
+      <cow-image src="../img/renault6.jpg" alt="Renault Screenshot 6" className="Experience__screenshot is-mobile"></cow-image>
+    </div>
+  </cow-visible>
 
   <footer>
     <p>Credits</p>
