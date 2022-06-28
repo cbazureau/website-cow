@@ -1,2 +1,4 @@
 // eslint-disable-next-line no-console
-console.log('cow example');
+document.getElementsByClassName('Header__scroll')[0].addEventListener("click", () => {
+    document.getElementById('about').scrollIntoView({ behavior: "smooth" });
+});  

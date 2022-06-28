@@ -1,54 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      content="width=device-width,initial-scale=1,shrink-to-fit=no"
-      name="viewport"
-    />
-    <meta content="#000000" name="theme-color" />
-    <cow-manifest-favicon
-      src="../img/original-favicon.png"
-    ></cow-manifest-favicon>
-    <title>Create one-page website</title>
-    <meta name="description" content="Create one-page website" />
-    <meta name="author" content="PUT-YOUR-NAME-HERE" />
-    <link href="./css/styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
-    <cow-visible className="Header">
-      <div class="Header__titleZone">
-        <h1>C&eacute;dric Bazureau</h1>
-        <h2>Building things for the web with love and passion since 2002</h2>
-        <p>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Renault Group.</p>
-      </div>
-      <div class="Header__imgZone">
-        <cow-image
-            src="../img/identite.jpg"
-            alt="It's me !"
-            className="Header__idPicture"
-          ></cow-image>
-      </div>
-    </cow-visible>
-    <nav>
-      <ul>
-        <li><a href="#how-to-start">Current postion</a></li>
-        <li><a href="#optimized">What do you mean by "optimized" ?</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-      </ul>
-    </nav>
-    
-    <footer>
-      <p>Credits</p>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport" />
+  <meta content="#000000" name="theme-color" />
+  <cow-manifest-favicon src="../img/original-favicon.png"></cow-manifest-favicon>
+  <title>Create one-page website</title>
+  <meta name="description" content="Create one-page website" />
+  <meta name="author" content="PUT-YOUR-NAME-HERE" />
+  <link href="./css/styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experiences</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <cow-visible className="Header" tag="header">
+    <div class="Header__titleZone">
+      <h1>C&eacute;dric Bazureau</h1>
+      <h2>Building things for the web with love and passion since 2002</h2>
       <p>
-        This website is build with <a href="https://github.com/cbazureau/create-one-page-website">create-one-page-website</a> a small framework for optimized one-page website created by myself
+        I’m a software engineer specializing in building (and occasionally
+        designing) exceptional digital experiences. Currently, I’m focused on
+        building accessible, human-centered products at Renault Group.
       </p>
-    </footer>
-    <script type="module" src="js/main.js"></script>
-    <cow-serviceworker></cow-serviceworker>
-  </body>
+    </div>
+    <div class="Header__imgZone">
+      <cow-image src="../img/identite.jpg" alt="It's me !" className="Header__idPicture"></cow-image>
+    </div>
+    <div class="Header__scroll">Learn more</div>
+  </cow-visible>
+
+  <section id="about" class="About">
+    <div class="About__intro">
+      <p>
+        Hello ! My name is <strong>C&eacute;dric</strong>. With twenty years of development and technical lead experience in various telecom, media and industry companies, I have acquired both technical and functional web skills.
+      </p>
+      <p>
+        On top of that i had the opportunity to 
+        create a Slack-based <a href="https://www.lebeaujeu.com/" rel="noopener noreferrer" target="_blank">community of developers</a> named <strong>Le beau jeu</strong>, 
+        to do pull requests on opensource projects such as webpack plugin <a href="https://github.com/webpack-contrib/mini-css-extract-plugin/pull/831" rel="noopener noreferrer" target="_blank">mini-css-extract-plugin</a>, 
+        to write an article on <a href="https://web.dev/renault" rel="noopener noreferrer" target="_blank">web.dev</a> about Core Web Vitals in collaboration with Google, 
+        to create a <a href="https://cbazureau.github.io/create-one-page-website/" rel="noopener noreferrer" target="_blank">framework</a> named <strong>Create One-page Website</strong> 
+        and, last but not least, to raise 2 kids !
+      </p>
+    </div>
+    <div class="Expert__features">
+      <div class="Expert__caroussel">
+        <div class="ExpertBlock"><span class="ExpertBlock__icon">
+          <cow-inline-svg src="../img/about-device.svg" className="ExpertBlock__svg"></cow-inline-svg>
+        </span>
+          <h3 class="ExpertBlock__title">Multi-device Web Development</h3>
+          <p class="ExpertBlock__desc">Aguerri au développement d'applications web complexes React, NodeJs, HTML5/JS/CSS
+            (mais également Angular, PHP) multi-navigateurs et multi-devices en Responsive ou Adaptive Design dans des
+            contextes multi-langues.</p>
+        </div>
+        <div class="ExpertBlock"><span class="ExpertBlock__icon">
+          <cow-inline-svg src="../img/about-lead.svg" className="ExpertBlock__svg"></cow-inline-svg>
+        </span>
+          <h3 class="ExpertBlock__title">Lead et Expertise Technique</h3>
+          <p class="ExpertBlock__desc">Expert référent et reconnu dans mes différentes expériences, je m'efforce de
+            transmettre, de conseiller et de mettre en pratique. J'effectue également de la veille technologique afin de
+            rester à la page.</p>
+        </div>
+        <div class="ExpertBlock"><span class="ExpertBlock__icon">
+          <cow-inline-svg src="../img/about-server.svg" className="ExpertBlock__svg"></cow-inline-svg>
+        </span>
+          <h3 class="ExpertBlock__title">Compétences Serveur/Cloud</h3>
+          <p class="ExpertBlock__desc">Hébergement AWS ou GCP via images docker ou non. Forte expertise sur les différents
+            niveaux d'une stack (NGINX, NodeJs, static, CDN) sur les services AWS (ECS, EC2, Cloudfront, S3, lambda, ...)
+            et sur les solutions de CI (Gitlab-CI, Jenkins)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="Experience Experience_groupRenault">
+    <p>https://web.dev/renault</p>
+    <p>Senior Lead Developper of 6 teams (26 devs) that managed more than 150 websites of Renault Group (Renault, Dacia,
+      Alpine, Mobilize) spread over more than 30 countries.</p>
+    <ul>
+      <li>Front using ReactJs<ul>
+          <li><strong>Server Side Rendering (SSR)</strong> with Server Push</li>
+          <li><strong>Responsive</strong> websites and Jpg/Webp pictures</li>
+          <li>IntersectionObserver <strong>Lazyloading</strong> for pictures and videos</li>
+          <li>JS and CSS <strong>Component-Based Chunking</strong></li>
+          <li>Wysiwyg CMS with a JSON API provided by <strong>Adobe Experience Manager (AEM)</strong></li>
+          <li><strong>React 18</strong>, Redux, Webpack, Babel, ...</li>
+          <li>Jest, Enzyme, ...</li>
+          <li>Eslint, Stylelint, Flow, Prettier...</li>
+        </ul>
+      </li>
+      <li>Back for front using Nodejs<ul>
+          <li><strong>Gitlab, Gitlab-Ci</strong>, Build and run <strong>Docker</strong> image</li>
+          <li>Nginx, AEM (as an headless CMS)</li>
+          <li>Hosting <strong>AWS</strong> : Cloudfront, Docker/ECS, Lambda</li>
+          <li>Monitoring : Google Lighthouse, Broken Links detection, Grafana, Kibana, Datadog</li>
+        </ul>
+  </section>
+
+  <footer>
+    <p>Credits</p>
+    <p>
+      This website is build with
+      <a href="https://github.com/cbazureau/create-one-page-website">create-one-page-website</a>
+      a small framework for optimized one-page website created by myself
+    </p>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+  <cow-serviceworker></cow-serviceworker>
+</body>
+
 </html>
