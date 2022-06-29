@@ -369,7 +369,13 @@ section {
 }
 .Experience__intro h1 {
   font-weight: 700;
-  font-size: clamp(4rem, 5vw, 6rem);
+  font-size: clamp(2rem, 5vw, 6rem);
+}
+
+@media (min-width: 700px) {
+  .Experience__intro {
+    max-width: 60vw;
+  }
 }
 
 .Experience_groupRenault {
@@ -400,53 +406,60 @@ section {
   position: absolute;
   right: 0;
   left: 0;
-  bottom: 10vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 5vw;
+  bottom: 2vh;
   width: 80vw;
   margin: auto;
-  opacity: 0.7;
+  perspective: 300px;
+  transform-style: preserve-3d;
 }
-.Experience__screenshot:nth-child(1){ grid-area: 1 / 1 / 4 / 2; }
-.Experience__screenshot:nth-child(2){ grid-area: 1 / 2 / 4 / 3; }
-.Experience__screenshot:nth-child(3) { grid-area: 1 / 3 / 4 / 4; }
+
+.Experience__screenshotsGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  transform: rotateX(0deg)rotateZ(-5deg)rotateY(-10deg) translateX(-5vw) translateY(4vh) scale(1.5)
+}
+
+.Experience__screenshot:nth-child(1) { grid-area: 1 / 1 / 4 / 4; }
+.Experience__screenshot:nth-child(2) { grid-area: 2 / 3 / 5 / 6; }
+.Experience__screenshot:nth-child(3) { grid-area: 1 / 5 / 4 / 8; }
+.Experience__screenshot:nth-child(4) { grid-area: 4 / 4 / 7 / 7; }
+.Experience__screenshot:nth-child(5) { grid-area: 5 / 2 / 8 / 5; }
+.Experience__screenshot:nth-child(6) { grid-area: 5 / 6 / 8 / 9; }
 
 .Experience__screenshot {
-  aspect-ratio: 9/20;
+  aspect-ratio: 1280/800;
   width: 100% !important;
-}
-
-@media (min-width: 1000px) {
-  .Experience__screenshots {
-    display: grid;
-    right: 2vw;
-    left: auto;
-    bottom: 4vh;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 2vw;
-    grid-row-gap: 4vh;
-    right: 2vw;
-    width: auto;
-    opacity: 0.5;
-  }
-  .Experience__screenshot:nth-child(1){ grid-area: 1 / 1 / 4 / 2; }
-  .Experience__screenshot:nth-child(2){ grid-area: 2 / 2 / 5 / 3; }
-  .Experience__screenshot:nth-child(3){ grid-area: 3 / 3 / 6 / 4; }
-
-  .Experience__screenshot {
-    width: auto !important;
-    height: 40vh;
-  }
+  z-index: 1;
 }
 
 .Experience__screenshot img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  transition: all 0.2s ease-in-out;
 }
+
+.Experience__screenshot:hover {
+  z-index: 2;
+}
+
+.Experience__screenshot:hover img {
+  transform: scale(1.3);
+}
+
+@media (min-width: 700px) {
+  .Experience__screenshots {
+    width: 40vw;
+    right: 2vw;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 
 
 /** Footer */

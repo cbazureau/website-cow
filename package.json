@@ -11,5 +11,8 @@
     "test": "cow-scripts test",
     "eject": "cow-scripts eject"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "devDependencies": {
+    "capture-website": "^2.4.0"
+  }
 }
