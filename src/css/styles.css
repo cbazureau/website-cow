@@ -360,14 +360,25 @@ section {
 
 .Experience__intro {
   z-index: 2;
+  padding: 0 max(24px, 4vw);
   font-size: clamp(1.4rem, 1.5vw, 2.3rem);
   font-weight: 300;
   line-height: 1.2;
-  padding: 0 max(24px, 4vw);
 }
 .Experience__intro h2 {
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.Experience__intro h3 {
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: clamp(1.4rem, 1.5vw, 2.3rem);
+  font-weight: 700;
+  display: inline-block;
+  padding: 4px 8px;
 }
 
 @media (min-width: 700px) {
@@ -477,18 +488,56 @@ section {
     transform: scale(1.3);
   }
 }
+.PastExperience {
+  background-color: white;
+  padding: max(12px, 5vh) 0;
+}
+.PastExperience h2 {
+  width: calc(100% - 10vw);
+  margin: 0 auto;
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: max(12px, 5vh);
+}
+
+.Jobs {
+  width: 100%;
+}
+.Jobs__caroussel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .Job {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 10vw);
-  margin: 0 auto;
+  width: 80vw;
+  margin: 2vh auto;
+  background-color: var(--platinum);
+  border-radius: 1rem;
+  scroll-snap-align: center;
+  padding: 2vh 1vw;
+}
+
+@media (min-width: 1200px) {
+  .Jobs {
+    width: 100%;
+  }
+  .Jobs__caroussel {
+    flex-direction: row;
+  }
+  .Job {
+    margin: 12px;
+    width: 30vw;
+  }
 }
 
 .Job__main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 @media only screen and (min-width: 500px) {
@@ -549,7 +598,6 @@ section {
   font-size: 1.6rem;
   line-height: 1.3;
   padding: 4px 0;
-  text-align: justify;
   color: var(--neutral-neutral);
 }
 
@@ -578,6 +626,15 @@ section {
 }
 
 
+.Socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.Socials__link {
+  width: 60px;
+  display: block;
+}
 
 
 /** Footer */
