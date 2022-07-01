@@ -508,11 +508,6 @@ section {
   line-height: 1.2;
   padding-bottom: 16px;
 }
-@media (min-width: 1200px) {
-  .PastExperience h2 {
-    padding-bottom: 5vh;
-  }
-}
 
 .Jobs {
   overflow-y: scroll;
@@ -520,11 +515,7 @@ section {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
-@media (min-width: 700px) {
-  .Jobs {
-    overflow-y: hidden;
-  }
-}
+
 
 .Jobs__caroussel {
   display: flex;
@@ -601,6 +592,20 @@ section {
   padding-top: 12px;
 }
 
+@media (min-width: 700px) {
+  .Jobs__caroussel {
+    width: 135vw;
+  }
+  .Job {
+    margin: 12px;
+    width: 45vw;
+    overflow-y: hidden;
+  }
+  .PastExperience h2 {
+    padding-bottom: 5vh;
+  }
+}
+
 
 @media (min-width: 1200px) {
   .Jobs__caroussel {
@@ -609,6 +614,10 @@ section {
   .Job {
     margin: 12px;
     width: 30vw;
+    overflow-y: hidden;
+  }
+  .PastExperience h2 {
+    padding-bottom: 5vh;
   }
 }
 
@@ -680,16 +689,66 @@ section {
 footer {
   background-color: var(--taupe-gray);
   color: var(--platinum);
-  padding: 8px 16px;
-  font-size: 1.2rem;
+  padding: 2vh 10vw;
+  font-size: clamp(2rem, 3vw, 2.7rem);
 }
 
 footer a {
   color: var(--platinum);
 }
 
-footer p:first-child {
-  font-weight: bold;
+.Footer__diploma {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
+.Footer__diplomaImg {
+  width: auto !important;
+  margin: 2vh 0;
+}
+
+.Footer__diploma p {
+  margin: 2vh 0;
+  padding: 0;
+}
+
+.Footer__end {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.Socials {
+  min-width: 220px;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media (min-width: 700px) {
+  .Footer__diploma {
+    flex-direction: row;
+  }
+  .Footer__diplomaImg img {
+    width: 220px;
+  }
+  .Footer__diplomaImg {
+    margin: 2vh 2vw 2vh 0;
+  }
+  .Footer__end {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .Socials {
+    margin-left: 2vw;
+  }
+}
+
+
 
 
