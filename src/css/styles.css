@@ -687,14 +687,20 @@ section {
 
 /** Footer */
 footer {
-  background-color: var(--taupe-gray);
+  background-color: black;
   color: var(--platinum);
   padding: 2vh 10vw;
-  font-size: clamp(2rem, 3vw, 2.7rem);
+  font-size: clamp(2rem, 1.5vw, 2.4rem);
+  display: flex;
+  flex-direction: column;
 }
 
 footer a {
   color: var(--platinum);
+}
+
+footer svg path {
+  fill: white;
 }
 
 .Footer__diploma {
@@ -706,9 +712,10 @@ footer a {
 .Footer__diplomaImg {
   width: auto !important;
   margin: 2vh 0;
+  filter: grayscale(0.8);
 }
 
-.Footer__diploma p {
+footer p {
   margin: 2vh 0;
   padding: 0;
 }
@@ -730,22 +737,32 @@ footer a {
 }
 
 @media (min-width: 700px) {
+  footer {
+    flex-direction: row;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  footer p {
+    margin: 2vh 2vw;
+    padding: 0;
+  }
   .Footer__diploma {
     flex-direction: row;
+    align-items: center;
+    border-right: 1px solid var(--platinum);
   }
   .Footer__diplomaImg img {
     width: 220px;
   }
   .Footer__diplomaImg {
-    margin: 2vh 2vw 2vh 0;
+    margin: 2vh 0 2vh 0;
   }
   .Footer__end {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   .Socials {
-    margin-left: 2vw;
+    margin: 2vh auto;
+    order: -1;
   }
 }
 
