@@ -1,336 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport" />
-  <meta content="#000000" name="theme-color" />
-  <cow-manifest-favicon src="../img/original-favicon.png"></cow-manifest-favicon>
-  <title>Create one-page website</title>
-  <meta name="description" content="Create one-page website" />
-  <meta name="author" content="PUT-YOUR-NAME-HERE" />
-  <link href="./css/styles.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet" />
-</head>
-
-<body>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experiences</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <cow-visible className="Header" tag="header">
-    <div class="Header__titleZone">
-      <h1>C&eacute;dric Bazureau</h1>
-      <h2>Building the web with <strong>love</strong> and <strong>passion</strong> since 2002</h2>
-      <p>
-        I’m a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I’m focused on
-        building accessible, human-centered products at Renault Group.
-      </p>
-    </div>
-    <div class="Header__imgZone">
-      <cow-image src="../img/identite.jpg" alt="It's me !" className="Header__idPicture"></cow-image>
-    </div>
-    <div class="Header__scroll">About me</div>
-  </cow-visible>
-
-  <section id="about" class="About">
-    <div class="About__intro">
-      <p>
-        Hello ! My name is <strong>C&eacute;dric</strong>. With twenty years of development and technical lead
-        experience in various telecom, media and industry companies, I have acquired both technical and functional web
-        skills.
-      </p>
-      <p>
-        On top of that i had the opportunity to
-        create a Slack-based <a href="https://www.lebeaujeu.com/" rel="noopener noreferrer" target="_blank">community of
-          developers</a> named <strong>Le beau jeu</strong>,
-        to do pull requests on opensource projects such as webpack plugin <a
-          href="https://github.com/webpack-contrib/mini-css-extract-plugin/pull/831" rel="noopener noreferrer"
-          target="_blank">mini-css-extract-plugin</a>,
-        to write an article on <a href="https://web.dev/renault" rel="noopener noreferrer" target="_blank">web.dev</a>
-        about Core Web Vitals in collaboration with Google,
-        to create a <a href="https://cbazureau.github.io/create-one-page-website/" rel="noopener noreferrer"
-          target="_blank">framework</a> named <strong>Create One-page Website</strong>
-        and, last but not least, to raise 2 kids !
-      </p>
-    </div>
-    <cow-visible className="Expert__features">
-      <div class="Expert__caroussel">
-        <div class="ExpertBlock"><span class="ExpertBlock__icon">
-            <cow-inline-svg src="../img/about-device.svg" className="ExpertBlock__svg"></cow-inline-svg>
-          </span>
-          <h3 class="ExpertBlock__title">Multi-device Web Development</h3>
-          <p class="ExpertBlock__desc">
-            Experienced in the development of complex web applications React, NodeJs, HTML5/JS/CSS
-            (but also Angular, PHP) multi-browser and multi-device in Responsive in
-            multilingual contexts.</p>
-          <ul class="ExpertBlock__technos">
-            <li><span>ReactJs</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>NodeJs</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>HTML5/VanillaJS/CSS</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>Angular/VueJs/Svelte</span><span class="ExpertBlock__Stars" style="--rating: 3;"></span></li>
-            <li><span>PHP</span><span class="ExpertBlock__Stars" style="--rating: 3;"></span></li>
-          </ul>
-        </div>
-        <div class="ExpertBlock"><span class="ExpertBlock__icon">
-            <cow-inline-svg src="../img/about-lead.svg" className="ExpertBlock__svg"></cow-inline-svg>
-          </span>
-          <h3 class="ExpertBlock__title">Lead et Expertise Technique</h3>
-          <p class="ExpertBlock__desc">Referent expert and recognized in my various experiences, I strive to transmit,
-            advise and put into practice. I also carry out technology watch in order to stay up to date.</p>
-          <ul class="ExpertBlock__technos">
-            <li><span>Teaching</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>Sharing/Contributing</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>Change Management</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>Software architect</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>POC</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-          </ul>
-        </div>
-        <div class="ExpertBlock"><span class="ExpertBlock__icon">
-            <cow-inline-svg src="../img/about-server.svg" className="ExpertBlock__svg"></cow-inline-svg>
-          </span>
-          <h3 class="ExpertBlock__title">Compétences Serveur/Cloud</h3>
-          <p class="ExpertBlock__desc">AWS or GCP hosting via docker images or not. Strong Web expertise (Web Server,
-            CDN, ...) on AWS services (ECS, EC2, Cloudfront, S3, lambda, ...) and on CI solutions (Gitlab-CI, Jenkins )
-          </p>
-          <ul class="ExpertBlock__technos">
-            <li><span>HTTP principles</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>NGINX/Apache</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-            <li><span>Docker</span><span class="ExpertBlock__Stars" style="--rating: 4.5;"></span></li>
-            <li><span>Gitlab-CI/Jenkins/Actions</span><span class="ExpertBlock__Stars" style="--rating: 4.5;"></span>
-            </li>
-            <li><span>AWS/GCP</span><span class="ExpertBlock__Stars" style="--rating: 4;"></span></li>
-          </ul>
-        </div>
-      </div>
-    </cow-visible>
-    <cow-visible className="About__scroll">Check my last experience</cow-visible>
-  </section>
-  <cow-visible className="Experience Experience_groupRenault" tag="section">
-    <cow-inline-svg src="../img/renault.svg" className="Renault__logo"></cow-inline-svg>
-    <div class="Experience__intro">
-      <h2>Renault Group</h2>
-      <h3>Since May 2017</h3>
-      <p><strong>Senior Lead Developper</strong> of 6 teams (26 devs) that managed more than 150 websites of Renault
-        Group (Renault,
-        Dacia,
-        Alpine, Mobilize) spread over more than 30 countries. The technical stack below delivered a <a
-          href="https://web.dev/renault" rel="noopener noreferrer" target="_blank">best in class experience</a></p>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta content="#000000" name="theme-color" />
+    <cow-manifest-favicon
+      src="../img/original-favicon.png"
+    ></cow-manifest-favicon>
+    <title>C&eacute;dric Bazureau</title>
+    <meta name="description" content="Create one-page website" />
+    <meta name="author" content="PUT-YOUR-NAME-HERE" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Cédric Bazureau",
+    "url": "https://www.cedric.bazureau.com/",
+    "jobTitle": "Front-End Senior Tech Lead",
+    "alumniOf": "Télécom Bretagne",
+    "gender": "male",
+    "address":{
+      "@type": "PostalAddress",
+      "addressLocality": "Région de Paris, France"
+    },
+    "image": "../img/identite.jpg",
+    "sameAs": [
+        "https://github.com/cbazureau",
+        "https://www.linkedin.com/in/cbazureau",
+        "https://web.dev/authors/c%C3%A9dricbazureau/",
+    ]
+  }</script>-->
+    <nav>
       <ul>
-        <li>Stack : <strong>Nginx</strong> (Web server) / <strong>ReactJs</strong> (CSR + SSR) / <strong>Nodejs</strong>
-          (Back for front) / Adobe Experience Manager (used as an headless JSON CMS)</li>
-        <li><strong>Server Side Rendering (SSR)</strong> for better SEO</li>
-        <li><strong>Responsive</strong> websites and <strong>Jpg/Png/Webp picture renditions</strong></li>
-        <li>IntersectionObserver <strong>Lazyloading</strong> for pictures, videos, iframes, ...</li>
-        <li>JS and CSS <strong>Component-Based Chunking</strong></li>
-        <li><strong>React 18</strong>, Redux, Webpack, Babel, ...</li>
-        <li>Jest, Enzyme and React-testing-library</li>
-        <li><strong>Enforced code quality</strong> : Eslint (Airbnb + custom rules), Stylelint (Airbnb + custom rules),
-          Flow, Prettier, ...</li>
-        <li><strong>Gitlab, Gitlab-Ci</strong>, Build, test and run on <strong>Docker</strong> image</li>
-        <li><strong>Hosted on AWS</strong> : Cloudfront, Docker/ECS, Lambda</li>
-        <li><strong>Monitoring</strong> : Google Lighthouse, Broken Links detection, Grafana, Kibana, ...</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experiences</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-    <cow-visible className="Experience__screenshots">
-      <div class="Experience__screenshotsGrid">
-        <cow-image src="../img/renault-0.jpg" alt="Renault Screenshot 0" className="Experience__screenshot"></cow-image>
-        <cow-image src="../img/renault-1.jpg" alt="Renault Screenshot 1" className="Experience__screenshot"></cow-image>
-        <cow-image src="../img/renault-2.jpg" alt="Renault Screenshot 2" className="Experience__screenshot"></cow-image>
-        <cow-image src="../img/renault-3.jpg" alt="Renault Screenshot 3" className="Experience__screenshot"></cow-image>
-        <cow-image src="../img/renault-4.jpg" alt="Renault Screenshot 4" className="Experience__screenshot"></cow-image>
-        <cow-image src="../img/renault-5.jpg" alt="Renault Screenshot 5" className="Experience__screenshot"></cow-image>
+    </nav>
+    <cow-visible className="Header" tag="header">
+      <div class="Header__titleZone">
+        <h1>C&eacute;dric Bazureau</h1>
+        <h2>
+          Building the web with <strong>love</strong> and
+          <strong>passion</strong> since 2002
+        </h2>
+        <p>
+          I’m a software engineer specializing in building exceptional B2C
+          digital experiences. Currently, I’m focused on creating and
+          maintaining efficient and effective products at Renault Group.
+        </p>
       </div>
+      <div class="Header__imgZone">
+        <cow-image
+          src="../img/identite.jpg"
+          alt="It's me !"
+          className="Header__idPicture"
+        ></cow-image>
+      </div>
+      <div class="Header__scroll">About me</div>
     </cow-visible>
-  </cow-visible>
 
-  <section class="PastExperience">
-    <h2 class="Title">Previous experiences</h2>
-    <cow-visible className="Jobs">
-      <div class="Jobs__caroussel">
-        <div class="Job">
-          <div class="Job__main">
-            <div class="Job__logo">
-              <cow-image src="../img/xp-canal.jpg"></cow-image>
-              <span class="Job__detailsMore">Learn more about <a href="http://www.canalplus.fr/">Canal+</a></span>
-
-            </div>
-            <div class="Job__description"><span class="Job__company">Canal+</span><span class="Job__dates">jan 2015 -
-                avr
-                2017</span><span class="Job__desc">Senior Developper on the IS technical overhaul. Senior Lead
-                Developper of the SALES feature team.</span></div>
-          </div>
-          <div class="Job__details">
-            <span class="Job__detailsTitle">Details</span>
-            <span class="Job__detailsDesc">
-              Equipe Scrum (8 pers) : Interface Tablette Vendeur, Refonte des sites clients
-            </span>
-            <span class="Job__detailsTitle">Accomplishments</span>
-            <span class="Job__detailsDesc">
-              <ul>
-                <li>Leader Technique de la feature VENTE (5 développeurs en mode full-stack)</li>
-                <li>Mise en place et dev d'une application (FACE Tablet) pour les vendeurs en popup store en
-                  AngularJs
-                  1.5.8</li>
-                <li>Mise en place et dev de la refonte de espaceclient et parcours de vente web en AngularJs 1.6.0
-                </li>
-              </ul>
-            </span>
-            <span class="Job__technos">
-              <ul class="ExpertBlock__technos">
-                <li><span>AngularJs 1.6</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-                <li><span>NodeJs</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-                <li><span>AWS</span><span class="ExpertBlock__Stars" style="--rating: 4.5;"></span></li>
-                <li><span>Gulp/Gitlab-CI/Jenkins/Puppet</span><span class="ExpertBlock__Stars"
-                    style="--rating: 4;"></span></li>
-                <li><span>MongoDb</span><span class="ExpertBlock__Stars" style="--rating: 4;"></span></li>
-              </ul>
-            </span>
-          </div>
-        </div>
-        <div class="Job">
-          <div class="Job__main">
-            <div class="Job__logo">
-              <cow-image src="../img/xp-bouygues.jpg"></cow-image>
-
-              <span class="Job__detailsMore">Learn more about <a href="http://www.bouyguestelecom.fr/">Bouygues
-                  Telecom</a></span>
-            </div>
-            <div class="Job__description"><span class="Job__company">Bouygues Telecom</span><span class="Job__dates">aou
-                2009 - nov 2014</span><span class="Job__desc">Junior Lead Developper on Bouygues Télécom B2C
-                websites.</span></div>
-          </div>
-          <div class="Job__details">
-            <span class="Job__detailsTitle">Details</span>
-            <span class="Job__detailsDesc">Projects
-              (6 to 15 devs) : Bbox Selfcare, Unified Selfcare, Centralized Module, Unified Assistance
-            </span>
-            <span class="Job__detailsTitle">Accomplishments</span>
-            <span class="Job__detailsDesc">
-              <ul>
-                <li>Web projetcts based on a NGINX/PHP-FPM stack calling SOAP services.</li>
-                <li>Member of Bougyues Expert Teams infusing our philosophy to Mobile teams.</li>
-                <li>Stat Tools using BigData/Live (RabbitMQ, ElasticSearch, ...).</li>
-                <li>NodeJs REST API using RethinkDb.</li>
-              </ul>
-            </span>
-            <span class="Job__technos">
-              <ul class="ExpertBlock__technos">
-                <li><span>PHP5</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-                <li><span>HTML5/CSS</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-                <li><span>NodeJs</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-                <li><span>NGINX</span><span class="ExpertBlock__Stars" style="--rating: 4;"></span></li>
-                <li><span>RethinkDb/MYSQL5</span><span class="ExpertBlock__Stars" style="--rating: 4;"></span></li>
-              </ul>
-            </span>
-          </div>
-        </div>
-        <div class="Job">
-          <div class="Job__main">
-            <div class="Job__logo">
-              <cow-image src="../img/xp-sopra.jpg"></cow-image>
-              <span class="Job__detailsMore is-white">Learn more about <a href="http://www.sopra.com/">Sopra
-                  Group</a></span>
-            </div>
-            <div class="Job__description"><span class="Job__company">Sopra Group</span><span class="Job__dates">déc 2004
-                -
-                jui 2009</span><span class="Job__desc">Developper and junior project manager for various company
-                websites.</span></div>
-          </div>
-          <div class="Job__details">
-            <span class="Job__detailsTitle">Details</span>
-            <span class="Job__detailsDesc">
-              Projet (5 pers) : Portail du département Hébergeur et Portail du département Production
-            </span>
-            <span class="Job__detailsTitle">Accomplishments</span>
-            <span class="Job__detailsDesc">
-              <ul>
-                <li>Management et développement d'une application Web des indicateurs de QOS.</li>
-                <li>Développeur puis Responsable de l'équipe en charge de la TMA du portail de l'hébergeur</li>
-                <li>Réalisation d'outils web pour faciliter le suivi projet des équipes de Sopra Group</li>
-              </ul>
-            </span>
-            <span class="Job__technos">
-              <ul class="ExpertBlock__technos">
-                <li><span>PHP5</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-                <li><span>MYSQL5</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-                <li><span>HTML5/CSS</span><span class="ExpertBlock__Stars" style="--rating: 5;"></span></li>
-                <li><span>Apache</span><span class="ExpertBlock__Stars" style="--rating: 4;"></span></li>
-                <li><span>IIS/SQL SERVER</span><span class="ExpertBlock__Stars" style="--rating: 3;"></span></li>
-              </ul>
-            </span>
-          </div>
-        </div>
+    <section id="about" class="About">
+      <div class="About__intro">
+        <p>
+          Hello ! My name is <strong>C&eacute;dric</strong>. With twenty years
+          of development and technical lead experience in various telecom, media
+          and industry companies, I have acquired both technical and functional
+          web skills.
+        </p>
+        <p>
+          On top of that i had the opportunity to create a Slack-based
+          <a
+            href="https://www.lebeaujeu.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >community of developers</a
+          >
+          named <strong>Le beau jeu</strong>, to do pull requests on opensource
+          projects such as webpack plugin
+          <a
+            href="https://github.com/webpack-contrib/mini-css-extract-plugin/pull/831"
+            rel="noopener noreferrer"
+            target="_blank"
+            >mini-css-extract-plugin</a
+          >, to write an article on
+          <a
+            href="https://web.dev/renault"
+            rel="noopener noreferrer"
+            target="_blank"
+            >web.dev</a
+          >
+          about Core Web Vitals in collaboration with Google, to create a
+          <a
+            href="https://cbazureau.github.io/create-one-page-website/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >framework</a
+          >
+          named <strong>Create One-page Website</strong>
+          and, last but not least, to raise 2 kids !
+        </p>
       </div>
+      <cow-visible className="Expert__features">
+        <div class="Expert__caroussel">
+          <div class="ExpertBlock">
+            <span class="ExpertBlock__icon">
+              <cow-inline-svg
+                src="../img/about-device.svg"
+                className="ExpertBlock__svg"
+              ></cow-inline-svg>
+            </span>
+            <h3 class="ExpertBlock__title">Multi-device Web Development</h3>
+            <p class="ExpertBlock__desc">
+              Experienced in the development of complex web applications React,
+              NodeJs, HTML5/JS/CSS (but also Angular, PHP) multi-browser and
+              multi-device in Responsive in multilingual contexts.
+            </p>
+            <ul class="ExpertBlock__technos">
+              <li>
+                <span>ReactJs</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>NodeJs</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>HTML5/VanillaJS/CSS</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>Angular/VueJs/Svelte</span
+                ><span class="ExpertBlock__Stars" style="--rating: 3"></span>
+              </li>
+              <li>
+                <span>PHP</span
+                ><span class="ExpertBlock__Stars" style="--rating: 3"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="ExpertBlock">
+            <span class="ExpertBlock__icon">
+              <cow-inline-svg
+                src="../img/about-lead.svg"
+                className="ExpertBlock__svg"
+              ></cow-inline-svg>
+            </span>
+            <h3 class="ExpertBlock__title">Lead et Expertise Technique</h3>
+            <p class="ExpertBlock__desc">
+              Referent expert and recognized in my various experiences, I strive
+              to transmit, advise and put into practice. I also carry out
+              technology watch in order to stay up to date.
+            </p>
+            <ul class="ExpertBlock__technos">
+              <li>
+                <span>Teaching</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>Sharing/Contributing</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>Change Management</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>Software architect</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>POC</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="ExpertBlock">
+            <span class="ExpertBlock__icon">
+              <cow-inline-svg
+                src="../img/about-server.svg"
+                className="ExpertBlock__svg"
+              ></cow-inline-svg>
+            </span>
+            <h3 class="ExpertBlock__title">Compétences Serveur/Cloud</h3>
+            <p class="ExpertBlock__desc">
+              AWS or GCP hosting via docker images or not. Strong Web expertise
+              (Web Server, CDN, ...) on AWS services (ECS, EC2, Cloudfront, S3,
+              lambda, ...) and on CI solutions (Gitlab-CI, Jenkins )
+            </p>
+            <ul class="ExpertBlock__technos">
+              <li>
+                <span>HTTP principles</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>NGINX/Apache</span
+                ><span class="ExpertBlock__Stars" style="--rating: 5"></span>
+              </li>
+              <li>
+                <span>Docker</span
+                ><span class="ExpertBlock__Stars" style="--rating: 4.5"></span>
+              </li>
+              <li>
+                <span>Gitlab-CI/Jenkins/Actions</span
+                ><span class="ExpertBlock__Stars" style="--rating: 4.5"></span>
+              </li>
+              <li>
+                <span>AWS/GCP</span
+                ><span class="ExpertBlock__Stars" style="--rating: 4"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </cow-visible>
+      <cow-visible className="About__scroll"
+        >Check my last experience</cow-visible
+      >
+    </section>
+    <cow-visible className="Experience Experience_groupRenault" tag="section">
+      <cow-inline-svg
+        src="../img/renault.svg"
+        className="Renault__logo"
+      ></cow-inline-svg>
+      <div class="Experience__intro">
+        <h2>Renault Group</h2>
+        <h3>Since May 2017</h3>
+        <p>
+          <strong>Senior Lead Developper</strong> of 6 teams (26 devs) that
+          managed more than 150 websites of Renault Group (Renault, Dacia,
+          Alpine, Mobilize) spread over more than 30 countries. The technical
+          stack below delivered a
+          <a
+            href="https://web.dev/renault"
+            rel="noopener noreferrer"
+            target="_blank"
+            >best in class experience</a
+          >
+        </p>
+        <ul>
+          <li>
+            Stack : <strong>Nginx</strong> (Web server) /
+            <strong>ReactJs</strong> (CSR + SSR) / <strong>Nodejs</strong> (Back
+            for front) / Adobe Experience Manager (used as an headless JSON CMS)
+          </li>
+          <li><strong>Server Side Rendering (SSR)</strong> for better SEO</li>
+          <li>
+            <strong>Responsive</strong> websites and
+            <strong>Jpg/Png/Webp picture renditions</strong>
+          </li>
+          <li>
+            IntersectionObserver <strong>Lazyloading</strong> for pictures,
+            videos, iframes, ...
+          </li>
+          <li>JS and CSS <strong>Component-Based Chunking</strong></li>
+          <li><strong>React 18</strong>, Redux, Webpack, Babel, ...</li>
+          <li>Jest, Enzyme and React-testing-library</li>
+          <li>
+            <strong>Enforced code quality</strong> : Eslint (Airbnb + custom
+            rules), Stylelint (Airbnb + custom rules), Flow, Prettier, ...
+          </li>
+          <li>
+            <strong>Gitlab, Gitlab-Ci</strong>, Build, test and run on
+            <strong>Docker</strong> image
+          </li>
+          <li>
+            <strong>Hosted on AWS</strong> : Cloudfront, Docker/ECS, Lambda
+          </li>
+          <li>
+            <strong>Monitoring</strong> : Google Lighthouse, Broken Links
+            detection, Grafana, Kibana, ...
+          </li>
+        </ul>
+      </div>
+      <cow-visible className="Experience__screenshots">
+        <div class="Experience__screenshotsGrid">
+          <cow-image
+            src="../img/renault-0.jpg"
+            alt="Renault Screenshot 0"
+            className="Experience__screenshot"
+          ></cow-image>
+          <cow-image
+            src="../img/renault-1.jpg"
+            alt="Renault Screenshot 1"
+            className="Experience__screenshot"
+          ></cow-image>
+          <cow-image
+            src="../img/renault-2.jpg"
+            alt="Renault Screenshot 2"
+            className="Experience__screenshot"
+          ></cow-image>
+          <cow-image
+            src="../img/renault-3.jpg"
+            alt="Renault Screenshot 3"
+            className="Experience__screenshot"
+          ></cow-image>
+          <cow-image
+            src="../img/renault-4.jpg"
+            alt="Renault Screenshot 4"
+            className="Experience__screenshot"
+          ></cow-image>
+          <cow-image
+            src="../img/renault-5.jpg"
+            alt="Renault Screenshot 5"
+            className="Experience__screenshot"
+          ></cow-image>
+        </div>
+      </cow-visible>
     </cow-visible>
-  </section>
 
-  <footer>
-    <cow-visible className="Footer__bg">
-      <div class="mountain">
-        <div class="mountain-top">
-          <div class="mountain-cap-1"></div>
-          <div class="mountain-cap-2"></div>
-          <div class="mountain-cap-3"></div>
-        </div>
-      </div>
-      <div class="mountain-two">
-        <div class="mountain-top">
-          <div class="mountain-cap-1"></div>
-          <div class="mountain-cap-2"></div>
-          <div class="mountain-cap-3"></div>
-        </div>
-      </div>
-       <div class="mountain-three">
-        <div class="mountain-top">
-          <div class="mountain-cap-1"></div>
-          <div class="mountain-cap-2"></div>
-          <div class="mountain-cap-3"></div>
-        </div>
-      </div>
-      <div class="cloud"></div>
-    </cow-visible>
-    <div class="Footer__diploma">
-      <cow-image className="Footer__diplomaImg" src="../img/telecom-cropped.jpg"></cow-image>
-      <p>
-        Graduated in 2004 from <a href="https://www.imt-atlantique.fr/en" rel="noopener noreferrer" target="_blank">IMT
-          Atlantique</a> (old-Télécom Bretagne) an engineering school that is part of the Mines competition and located
-        in Plouzané near Brest.</p>
-    </div>
-    <div class="Footer__contact">
-      <p>
-        Je ne suis pas actuellement en recherche d'emploi mais vous pouvez me contacter via mon <a href="https://www.linkedin.com/in/cbazureau" rel="noopener noreferrer" target="_blank">profil linkedin</a>.</p>
-    </div>
-    <div class="Footer__end">
-      <div class="Socials">
-        <a class="Socials__link" href="https://github.com/cbazureau/" rel="noopener noreferrer" target="_blank">
-          <cow-inline-svg src="../img/github.svg"></cow-inline-svg>
-        </a>
-        <a class="Socials__link" href="https://www.linkedin.com/in/cbazureau" rel="noopener noreferrer" target="_blank">
-          <cow-inline-svg src="../img/linkedin.svg"></cow-inline-svg>
-        </a>
-        <a class="Socials__link" href="https://web.dev/authors/c%C3%A9dricbazureau/" rel="noopener noreferrer"
-          target="_blank">
-          <cow-inline-svg src="../img/webdev.svg"></cow-inline-svg>
-        </a>
-      </div>
-      <p>
-        This website is build with
-        <a href="https://github.com/cbazureau/create-one-page-website"
-          rel="noopener noreferrer">create-one-page-website</a>
-        a small framework for optimized one-page website created by myself
-      </p>
-    </div>
+    <section class="PastExperience">
+      <h2 class="Title">Previous experiences</h2>
+      <cow-visible className="Jobs">
+        <div class="Jobs__caroussel">
+          <div class="Job">
+            <div class="Job__main">
+              <div class="Job__logo">
+                <cow-image src="../img/xp-canal.jpg"></cow-image>
+                <span class="Job__detailsMore"
+                  >Learn more about
+                  <a href="http://www.canalplus.fr/">Canal+</a></span
+                >
+              </div>
+              <div class="Job__description">
+                <span class="Job__company">Canal+</span
+                ><span class="Job__dates">jan 2015 - avr 2017</span
+                ><span class="Job__desc"
+                  >Senior Developper on the IS technical overhaul. Senior Lead
+                  Developper of the SALES feature team.</span
+                >
+              </div>
+            </div>
+            <div class="Job__details">
+              <span class="Job__detailsTitle">Details</span>
+              <span class="Job__detailsDesc">
+                Scrum Team (8 people): Vendor Tablet Interface, Redesign of
+                customer sites
+              </span>
+              <span class="Job__detailsTitle">Accomplishments</span>
+              <span class="Job__detailsDesc">
+                <ul>
+                  <li>
+                    Senior Lead of the SALE feature (5 developers in full-stack
+                    mode)
+                  </li>
+                  <li>
+                    Implementation and development of an application (FACE
+                    Tablet) for sellers in popup store AngularJs 1.5.8
+                  </li>
+                  <li>
+                    Implementation and development of the redesign of the
+                    customer area and web sales path in AngularJs 1.6.0
+                  </li>
+                </ul>
+              </span>
+              <span class="Job__technos">
+                <ul class="ExpertBlock__technos">
+                  <li>
+                    <span>AngularJs 1.6</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>NodeJs</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>AWS</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 4.5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>Gulp/Gitlab-CI/Jenkins/Puppet</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 4"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>MongoDb</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 4"
+                    ></span>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+          <div class="Job">
+            <div class="Job__main">
+              <div class="Job__logo">
+                <cow-image src="../img/xp-bouygues.jpg"></cow-image>
 
-  </footer>
-  <script type="module" src="js/main.js"></script>
-  <cow-serviceworker></cow-serviceworker>
-</body>
+                <span class="Job__detailsMore"
+                  >Learn more about
+                  <a href="http://www.bouyguestelecom.fr/"
+                    >Bouygues Telecom</a
+                  ></span
+                >
+              </div>
+              <div class="Job__description">
+                <span class="Job__company">Bouygues Telecom</span
+                ><span class="Job__dates">aou 2009 - nov 2014</span
+                ><span class="Job__desc"
+                  >Junior Lead Developper on Bouygues Télécom B2C
+                  websites.</span
+                >
+              </div>
+            </div>
+            <div class="Job__details">
+              <span class="Job__detailsTitle">Details</span>
+              <span class="Job__detailsDesc"
+                >Projects (6 to 15 devs) : Bbox Selfcare, Unified Selfcare,
+                Centralized Module, Unified Assistance
+              </span>
+              <span class="Job__detailsTitle">Accomplishments</span>
+              <span class="Job__detailsDesc">
+                <ul>
+                  <li>
+                    Web projetcts based on a NGINX/PHP-FPM stack calling SOAP
+                    services.
+                  </li>
+                  <li>
+                    Member of Bougyues Expert Teams infusing our philosophy to
+                    Mobile teams.
+                  </li>
+                  <li>
+                    Stat Tools using BigData/Live (RabbitMQ, ElasticSearch,
+                    ...).
+                  </li>
+                  <li>NodeJs REST API using RethinkDb.</li>
+                </ul>
+              </span>
+              <span class="Job__technos">
+                <ul class="ExpertBlock__technos">
+                  <li>
+                    <span>PHP5</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>HTML5/CSS</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>NodeJs</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>NGINX</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 4"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>RethinkDb/MYSQL5</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 4"
+                    ></span>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+          <div class="Job">
+            <div class="Job__main">
+              <div class="Job__logo">
+                <cow-image src="../img/xp-sopra.jpg"></cow-image>
+                <span class="Job__detailsMore is-white"
+                  >Learn more about
+                  <a href="http://www.sopra.com/">Sopra Group</a></span
+                >
+              </div>
+              <div class="Job__description">
+                <span class="Job__company">Sopra Group</span
+                ><span class="Job__dates">déc 2004 - jui 2009</span
+                ><span class="Job__desc"
+                  >Developper and junior project manager for various company
+                  websites.</span
+                >
+              </div>
+            </div>
+            <div class="Job__details">
+              <span class="Job__detailsTitle">Details</span>
+              <span class="Job__detailsDesc">
+                Project (5 people): Portal of the Hosting Department and Portal
+                of the Production Department
+              </span>
+              <span class="Job__detailsTitle">Accomplishments</span>
+              <span class="Job__detailsDesc">
+                <ul>
+                  <li>
+                    Management and development of a Web application of QOS
+                    indicators.
+                  </li>
+                  <li>
+                    Developer then Manager of the team in charge of the TMA of
+                    the hosting provider's portal.
+                  </li>
+                  <li>
+                    Development of web tools to facilitate project monitoring
+                    for Sopra Group teams.
+                  </li>
+                </ul>
+              </span>
+              <span class="Job__technos">
+                <ul class="ExpertBlock__technos">
+                  <li>
+                    <span>PHP5</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>MYSQL5</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>HTML5/CSS</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 5"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>Apache</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 4"
+                    ></span>
+                  </li>
+                  <li>
+                    <span>IIS/SQL SERVER</span
+                    ><span
+                      class="ExpertBlock__Stars"
+                      style="--rating: 3"
+                    ></span>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+      </cow-visible>
+    </section>
 
+    <footer>
+      <cow-visible className="Footer__bg">
+        <div class="mountain">
+          <div class="mountain-top">
+            <div class="mountain-cap-1"></div>
+            <div class="mountain-cap-2"></div>
+            <div class="mountain-cap-3"></div>
+          </div>
+        </div>
+        <div class="mountain-two">
+          <div class="mountain-top">
+            <div class="mountain-cap-1"></div>
+            <div class="mountain-cap-2"></div>
+            <div class="mountain-cap-3"></div>
+          </div>
+        </div>
+        <div class="mountain-three">
+          <div class="mountain-top">
+            <div class="mountain-cap-1"></div>
+            <div class="mountain-cap-2"></div>
+            <div class="mountain-cap-3"></div>
+          </div>
+        </div>
+        <div class="cloud"></div>
+      </cow-visible>
+      <div class="Footer__diploma">
+        <cow-image
+          className="Footer__diplomaImg"
+          src="../img/telecom-cropped.jpg"
+        ></cow-image>
+        <p>
+          Graduated in 2004 from
+          <a
+            href="https://www.imt-atlantique.fr/en"
+            rel="noopener noreferrer"
+            target="_blank"
+            >IMT Atlantique</a
+          >
+          (old-Télécom Bretagne) an engineering school that is part of the Mines
+          competition and located in Plouzané near Brest.
+        </p>
+      </div>
+      <div class="Footer__contact">
+        <p>
+          I am not currently looking for a job but you can contact me via my
+          <a
+            href="https://www.linkedin.com/in/cbazureau"
+            rel="noopener noreferrer"
+            target="_blank"
+            >linkedin profile</a
+          >.
+        </p>
+      </div>
+      <div class="Footer__end">
+        <div class="Socials">
+          <a
+            class="Socials__link"
+            href="https://github.com/cbazureau/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <cow-inline-svg src="../img/github.svg"></cow-inline-svg>
+          </a>
+          <a
+            class="Socials__link"
+            href="https://www.linkedin.com/in/cbazureau"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <cow-inline-svg src="../img/linkedin.svg"></cow-inline-svg>
+          </a>
+          <a
+            class="Socials__link"
+            href="https://web.dev/authors/c%C3%A9dricbazureau/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <cow-inline-svg src="../img/webdev.svg"></cow-inline-svg>
+          </a>
+        </div>
+        <p>
+          This website is build with
+          <a
+            href="https://github.com/cbazureau/create-one-page-website"
+            rel="noopener noreferrer"
+            >create-one-page-website</a
+          >
+          a small framework for optimized one-page website created by myself
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+    <cow-serviceworker></cow-serviceworker>
+  </body>
 </html>

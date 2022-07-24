@@ -170,7 +170,7 @@ section {
   transform: translateX(-50%);
   font-size: 1.4rem;
   cursor: pointer;
-  bottom: 10vh;
+  bottom: max(10vh, 64px);
   opacity: 0;
   transition: all 1s ease-in-out 0.6s;
 }
@@ -179,24 +179,24 @@ section {
   .About__scroll {
     left: 25%;
     font-size: 2rem;
-    bottom: 12vh;
+    bottom: max(12vh, 64px);
     opacity: 0;
   }
   .About__scroll {
     left: 50%;
-    bottom: 10vh;
+    bottom: max(10vh, 64px);
   }
 }
 
 .Header.is-visible .Header__scroll,
 .About__scroll.is-visible {
-  bottom: 7vh;
+  bottom: max(7vh, 40px);
   opacity: 1;
 }
 
 @media (min-width: 700px) {
   .Header.is-visible .Header__scroll {
-    bottom: 10vh;
+    bottom: max(10vh, 40px);
     opacity: 1;
   }
 }
@@ -238,6 +238,7 @@ section {
   width: 100%;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  margin-bottom: 32px;
 }
 @media (min-width: 700px) {
   .Expert__features {
@@ -308,11 +309,11 @@ section {
 
 .ExpertBlock__icon {
   display: block;
-  margin: 36px 8px 8px;
+  margin: max(4vh, 24px) 8px 8px;
 }
 
 .ExpertBlock__svg {
-  width: 100px;
+  width: max(8vh, 64px);
 }
 
 .ExpertBlock__svg .svg1 {
