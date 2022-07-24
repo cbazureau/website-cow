@@ -138,9 +138,12 @@ section {
 
 .Header__idPicture {
   position: relative;
+  display: block;
+  width: 100%;
 }
 .Header__idPicture img {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  width: 100%;
 }
 .Header__idPicture::before {
   position: absolute;
@@ -394,7 +397,6 @@ section {
 }
 
 .Experience__intro {
-  position: absolute;
   z-index: 3;
   padding: 0 max(24px, 4vw);
   font-size: clamp(1.4rem, 1.3vw, 2.3rem);
@@ -510,9 +512,9 @@ section {
 
 .Experience__screenshot {
   aspect-ratio: 1280/800;
-  width: 100% !important;
   z-index: 1;
   position: relative;
+  width: 100%;
 }
 
 .Experience__screenshot img {
@@ -784,9 +786,14 @@ footer a:hover svg path {
   flex-direction: column;
 }
 .Footer__diplomaImg {
-  width: auto !important;
   margin: 2vh 0;
+  width: 100%;
   filter: grayscale(0.8);
+}
+.Footer__diplomaImg img {
+  display: block;
+  width: 100%;
+
 }
 
 footer p {
@@ -834,6 +841,7 @@ footer p {
 
   .Footer__diplomaImg {
     margin: 0 2vw;
+    width: calc(100% - 4vw);
   }
   .Socials {
     margin: 2vh auto;
