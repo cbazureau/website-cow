@@ -1,5 +1,6 @@
 module.exports = {
   publicUrl: '/create-one-page-website/',
+  extraFilesToCopy: ['.htaccess', 'robots.txt', 'sitemap.xml'],
   plugins: {
     'cow-scripts/posthtml-cow-component': {
       workingDir: __dirname,

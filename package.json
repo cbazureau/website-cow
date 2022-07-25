@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "cow-scripts": "0.2.4"
+    "cow-scripts": "0.3.0"
   },
   "scripts": {
     "start": "cow-scripts start",
