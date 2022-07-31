@@ -130,7 +130,7 @@ section {
 }
 @media (min-width: 700px) {
   .Header__imgZone {
-    width: min(80vh, 40vw);
+    width: min(75vh, 40vw);
     order: initial;
     margin-bottom: 0;
   }
