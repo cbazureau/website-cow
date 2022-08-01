@@ -176,6 +176,7 @@ section {
   bottom: max(10vh, 64px);
   opacity: 0;
   transition: all 1s ease-in-out 0.6s;
+  text-align: center;
 }
 @media (min-width: 700px) {
   .Header__scroll,
@@ -790,7 +791,9 @@ footer a:hover svg path {
 .Footer__diplomaImg img {
   display: block;
   width: 100%;
-
+}
+.Footer__contact {
+  margin-bottom: 2vh;
 }
 
 footer p {
@@ -812,6 +815,7 @@ footer p {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  margin-bottom: 2vh;
 }
 
 @media (min-width: 700px) {
@@ -831,6 +835,7 @@ footer p {
   .Footer__contact {
     width: 33%;
     border-right: 1px solid var(--light-black);
+    margin-bottom: 0;
   }
   .Footer__end {
     width: 33%;
