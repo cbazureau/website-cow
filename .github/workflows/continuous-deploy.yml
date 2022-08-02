@@ -1,0 +1,33 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '16'
+    # Install
+    - name: Install
+      id: install
+      run: npm install
+    # Build
+    - name: Build
+      id: build
+      run: npm run build
+    # Deploy
+    - name: Deploy
+      id: deploy
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+       server: ${{ secrets.FTP_SERVER }}
+       password: ${{ secrets.FTP_PASSWORD }}
+       username: ${{ secrets.FTP_USERNAME }}
+       local-dir: dist/
+       server-dir: ${{ secrets.FTP_SERVER_DIR }}
