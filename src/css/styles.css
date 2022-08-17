@@ -16,18 +16,6 @@ a {
   color: var(--light-black);
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
-/* Avoid Chrome to see Safari hack */
-@supports (-webkit-touch-callout: none) {
-  body {
-    /* The hack for Safari */
-    min-height: -webkit-fill-available;
-  }
-}
-
 body {
   color: var(--light-black);
   background-color: var(--white);
@@ -50,6 +38,7 @@ section {
 ********************************************* */
 .Header {
   height: 100vh;
+  max-height: -webkit-fill-available;
   width: var(--standard-width);
   margin: 0 auto;
   position: relative;
