@@ -1,24 +1,117 @@
 @import url("./minimal-normalize.css");
 
 :root {
-  --full-white: #ffffff;
-  --white: #f0f0f0;
-  --gray: #e4e4e4;
-  --dark-gray: #6a6a6a;
-  --light-black: #333333;
-  --black: #000000;
-  --main: #b33737;
+  --white: #fff;
+  --white-dark: #f5f5f5;
+
+  --gray: #b5b5b5;
+  --gray-dark: #6c6c6c;
+
+  --black-light: #1d1d1d;
+  --black: #000;
+
+  --main-light: #fde276;
+  --main: #f6c90e;
+  --main-dark: #947702;
 
   --standard-width: calc(100% - 10vw);
 }
 
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+
+  from,
+  to {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.Header::after,
+.Header::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-55vh);
+}
+
+.Header::after {
+  top: 5vh;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 50vh 0;
+  border-color: transparent #f6c90e transparent transparent;
+}
+
+.Header::before {
+  top: 0;
+  width: 100%;
+  height: 5vh;
+  background-color: #f6c90e;
+}
+
+@media (min-width: 700px) {
+
+  .Header::after,
+  .Header::before {
+    transform: translateY(0) translateX(45vw);
+  }
+
+  .Header::after {
+    top: 0;
+    right: 5vw;
+    height: 100%;
+    border-width: 0 0 100vh 40vw;
+    border-color: transparent transparent #f6c90e transparent;
+  }
+
+  .Header::before {
+    width: 5vw;
+    height: 100%;
+  }
+}
+
+.Header.is-visible::after,
+.Header.is-visible::before {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
 a {
-  color: var(--light-black);
+  color: var(--white-dark);
 }
 
 body {
-  color: var(--light-black);
-  background-color: var(--white);
+  color: var(--white-dark);
+  background-color: var(--black);
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
@@ -39,8 +132,8 @@ section {
 .Header {
   height: 100vh;
   max-height: -webkit-fill-available;
-  width: var(--standard-width);
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 5vw;
   position: relative;
   overflow-x: hidden;
   display: flex;
@@ -90,6 +183,55 @@ section {
   transition: all 0.3s ease-in-out 0.1s;
 }
 
+.Header h2>.magic {
+  display: inline-block;
+  position: relative;
+}
+
+.Header h2>.magic>.magic-star {
+  --size: clamp(20px, 1.5vw, 30px);
+
+  animation: scale 700ms ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size);
+}
+
+.Header h2>.magic>.magic-star>svg {
+  animation: rotate 1000ms linear infinite;
+  display: block;
+  opacity: 0.7;
+}
+
+.Header h2>.magic>.magic-star>svg>path {
+  fill: var(--main-dark);
+}
+
+.Header h2>.magic>.magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right,
+      var(--main),
+      var(--main-dark),
+      var(--main-light),
+      var(--main));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+.Header .magic-star {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out 1s;
+}
+
+.Header.is-visible .magic-star {
+  opacity: 1;
+}
+
 @media (min-width: 700px) {
   .Header h2 {
     text-align: left;
@@ -132,6 +274,7 @@ section {
 }
 
 .Header__imgZone {
+  z-index: 2;
   order: -1;
   width: min(30vh, 300px);
   margin-bottom: 8vh;
@@ -139,7 +282,7 @@ section {
 
 @media (min-width: 700px) {
   .Header__imgZone {
-    width: min(75vh, 40vw);
+    width: min(70vh, 35vw);
     order: initial;
     margin-bottom: 0;
   }
@@ -160,7 +303,7 @@ section {
   position: absolute;
   z-index: -1;
   content: "";
-  background-color: var(--gray);
+  background-color: var(--black-light);
   top: 0;
   left: 0;
   right: 0;
@@ -178,6 +321,7 @@ section {
 
 .Header__scroll,
 .About__scroll {
+  color: var(--main);
   position: absolute;
   font-weight: 700;
   left: 50%;
@@ -226,8 +370,8 @@ section {
   left: 50%;
   bottom: -18px;
   display: block;
-  border-right: 3px solid var(--light-black);
-  border-bottom: 3px solid var(--light-black);
+  border-right: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
   width: 10px;
   height: 10px;
   transform: translate(-50%, 0) rotate(45deg);
@@ -237,8 +381,8 @@ section {
 
   .Header__scroll::before,
   .About__scroll::before {
-    border-right: 4px solid var(--light-black);
-    border-bottom: 4px solid var(--light-black);
+    border-right: 4px solid currentColor;
+    border-bottom: 4px solid currentColor;
     width: 20px;
     height: 20px;
     bottom: -24px;
@@ -250,6 +394,7 @@ section {
 ********************************************* */
 .About {
   position: relative;
+  background-color: var(--black-light);
 }
 
 .Expert__features {
@@ -301,7 +446,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--gray);
+  background-color: var(--black);
   border-radius: 1rem;
   scroll-snap-align: center;
   opacity: 0.4;
@@ -341,11 +486,11 @@ section {
 }
 
 .ExpertBlock__svg .svg1 {
-  fill: var(--light-black);
+  fill: var(--white-dark);
 }
 
 .ExpertBlock__svg .svg2 {
-  fill: var(--dark-gray);
+  fill: var(--gray);
 }
 
 .ExpertBlock__title {
@@ -354,6 +499,7 @@ section {
   margin: 0;
   padding: 8px 12px;
   text-align: center;
+  color: var(--main);
 }
 
 .ExpertBlock__desc {
@@ -408,8 +554,8 @@ section {
   content: "★★★★★";
   letter-spacing: 3px;
   background: linear-gradient(90deg,
-      var(--black) var(--percent),
-      var(--dark-gray) var(--percent));
+      var(--white) var(--percent),
+      var(--gray-dark) var(--percent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -430,7 +576,7 @@ section {
 }
 
 .Experience__intro a {
-  color: var(--white);
+  color: var(--white-dark);
 }
 
 .Experience__intro h2 {
@@ -463,12 +609,12 @@ section {
   background-color: var(--black);
   overflow: hidden;
   position: relative;
-  color: var(--white);
+  color: var(--white-dark);
 }
 
 .Renault__logo {
   z-index: 0;
-  fill: var(--white);
+  fill: var(--white-dark);
   position: absolute;
   height: 140%;
   opacity: 0.2;
@@ -590,7 +736,7 @@ section {
 }
 
 .PastExperience {
-  background-color: var(--white);
+  background-color: var(--black-light);
   padding: max(12px, 5vh) 0;
 }
 
@@ -623,7 +769,7 @@ section {
   flex-direction: column;
   width: 80vw;
   margin: 2vh auto;
-  background-color: var(--full-white);
+  background-color: var(--black);
   scroll-snap-align: center;
   padding: 0;
   border-radius: 1rem;
@@ -666,7 +812,7 @@ section {
 .Job__company {
   display: block;
   font-weight: 700;
-  color: var(--neutral-darker);
+  color: var(--main);
   font-size: 2.2rem;
   padding: 0;
 }
@@ -678,8 +824,8 @@ section {
   font-size: 1.3rem;
   font-weight: 700;
   border-radius: 6px;
-  background-color: var(--light-black);
-  color: var(--white);
+  background-color: var(--main);
+  color: var(--black);
   padding: 4px 10px;
   display: inline-block;
 }
@@ -694,7 +840,7 @@ section {
 }
 
 .Job__technos .ExpertBlock__technos {
-  border-top: 1px solid var(--light-black);
+  border-top: 1px solid var(--black-light);
   padding-top: 12px;
 }
 
@@ -774,7 +920,7 @@ section {
   left: 12px;
   z-index: 1;
   font-size: 1.2rem;
-  color: var(--white);
+  color: var(--white-dark);
 }
 
 .Job__detailsMore a {
@@ -812,7 +958,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--full-white);
+  color: var(--white);
 }
 
 footer svg path {
@@ -820,7 +966,7 @@ footer svg path {
 }
 
 footer a:hover svg path {
-  fill: var(--full-white);
+  fill: var(--white);
 }
 
 .Footer__diploma {
@@ -881,12 +1027,12 @@ footer p {
 
   .Footer__diploma {
     width: 33%;
-    border-right: 1px solid var(--light-black);
+    border-right: 1px solid var(--black-light);
   }
 
   .Footer__contact {
     width: 33%;
-    border-right: 1px solid var(--light-black);
+    border-right: 1px solid var(--black-light);
     margin-bottom: 0;
   }
 
@@ -913,7 +1059,8 @@ footer p {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  background: var(--black-light);
+  z-index: -1;
 }
 
 .mountain,
@@ -947,7 +1094,7 @@ footer p {
   right: calc(-1 * var(--base-value));
   border-left: var(--base-value) solid transparent;
   border-right: var(--base-value) solid transparent;
-  border-bottom: calc(2 / 3 * var(--base-value)) solid var(--dark-gray);
+  border-bottom: calc(2 / 3 * var(--base-value)) solid var(--gray-dark);
   z-index: 2;
 }
 
@@ -958,7 +1105,7 @@ footer p {
   top: calc(2 / 3 * var(--base-value) - 1px);
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  border-top: 20px solid var(--dark-gray);
+  border-top: 20px solid var(--gray-dark);
 }
 
 .mountain-cap-1 {
@@ -972,7 +1119,7 @@ footer p {
 .mountain-cap-3 {
   left: 15px;
   border-right: 30px solid transparent;
-  border-top: 25px solid var(--dark-gray);
+  border-top: 25px solid var(--gray-dark);
 }
 
 .cloud,
